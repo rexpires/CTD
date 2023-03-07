@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+
+.navbar-custom {
+  background-color: black;
+  font-size: 20px
+}
+
+.navbar-custom a {
+  color: white;
+}
+
+.navbar-custom a:hover {
+  color: rgb(244, 131, 10);
+}
+
+.toggler-custom {
+  background-color: rgb(244, 131, 10);
+}
+
+.navbar-custom .navbar-nav-custom {
+  width: 100%;
+  justify-content: end;
+  padding-right: 12px;
+}
+
+.navbar-custom .btn-login {
+  background-color: rgb(244, 131, 10);
+  border-style: none;
+  color: rgb(0, 0, 0)
+}
+
+.navbar-custom .btn-login:hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+
+/* Início Modal */
+
+.modal-header-custom {
+  border: none !important;
+}
+
+.modal-header-custom .btn-close {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(244, 131, 10);
+}
+
+.modal-logo {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  width: 150px;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.form-content {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-content div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 0.1px solid #DCDCDC;
+}
+
+.form-content input:hover {
+  border: 1px solid rgb(244, 131, 10);
+  transition: .5s;
+}
+
+.modal-footer-custom {
+  justify-content: center;
+  border: 0;
+  margin-bottom: 5px;
+}
+
+.modal-footer-custom .btn-secondary {
+  width: 300px;
+  height: 50px;
+  background-color: rgb(244, 131, 10) !important;
+  border: none;
+}
+
+.modal-footer-custom button:hover {
+  color: #171717 !important;
+  background-color: rgb(68, 242, 33) !important;
+  scale: 1.1;
+}
+
+/* Main */
+
+
+.main-content .welcome {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./imagens/Quattroformaggio-detalhe.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.detalhe {
+  padding: 20px;
+}
+
+.detalhe .estrela {
+  width: 40px;
+  top: 20px;
+  left: 20px;
+}
+
+.estrela:hover {
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+
+.main-content .section-title {
+  padding: 10px;
+  text-align: left;
+  font-size: 45px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.main-content .tipo-pedido {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pedido {
+  height: 200px;
+  width:200px;
+  border: none;
+  background-color: white;
+}
+
+.pedido img {
+  height: 180px;
+  width: 180px;
+}
+
+.pedido:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+/* Rodapé */
+
+footer {
+  flex: 1;
+  background-color: black;
+  font-family: sans-serif;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  color: white;
+}
+
+.footer-names {
+  padding: 10px 0;
+}
+
+.footer-names p,
+i {
+  color: white;
+}
+
+.icons img {
+  margin-right: 10px;
+}
+
+.footer-msg p {
+  text-align: center;
+  padding: 30px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.5);
+
+}
+
+.active {
+  color: #e51b3e !important;
+  cursor: default;
+}
+
+@media(max-width: 768px) {
+
+  .footer-menu {
+
+      display: block;
+      
+  }
+  .version-mobile {
+    display: flex ;
+  }
+  .version-tablet {
+    display: none;
+  }
+}

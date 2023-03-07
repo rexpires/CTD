@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Checkpoint Pizzaria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles-home.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="https://github.com/rexpires/ctd-front-end-1/blob/main/checkpoint-2/imagens/Logo%20Checkpoint%202%20-%2080%C2%A0%C3%97%C2%A080%C2%A0px.png?raw=true" alt=""></a>
+        <h4 class="version-mobile"> V.Mobile</h4>
+        <h5 class="version-tablet"> V.Tablet</h5>
+        <button class="navbar-toggler toggler-custom" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-custom">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#img01">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Principais Sabores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Sobre Nós</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-success btn-login" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">Login</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Modal -->
+
+    <div class="modal fade modal-custom" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+      tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-logo">
+            <img class="modal-img" src="https://github.com/rexpires/ctd-front-end-1/blob/main/checkpoint-2/imagens/Logo%20Checkpoint%202%20-%20500x500%20px%20(1).png?raw=true" alt="">
+          </div>
+          <div class="modal-body">
+            <form class="form-content" action="">
+              <div>
+                <label for="email">E-mail</label>
+                <input type="text" id="email" placeholder="email@email.com.br">
+              </div>
+              <div>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer modal-footer-custom">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <section class="welcome" id="img01">
+      <div class="banner-text">
+        <h1>Você nunca provou nada igual!</h1>
+      </div>
+      <button class="order-button">FAÇA SEU PEDIDO</button>
+    </section>
+
+    <section class="products" id="products">
+      <h1 class="section-title">Principais Sabores</h1>
+
+      <div class="container text-center">
+        <div class="row row-custom">
+
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <img src="./imagens/Peperoni.jpg" class="card-img-top card-custom" alt="...">
+              <div class="card-body body-custom">
+                <h5 class="card-title">Pepperoni</h5>
+                <p class="card-text">O carro-chefe da Checkpoint Pizzaria.</p>
+                <a href="Pepperoni.html" class="btn btn-primary button-custom">Pedir!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <img src="./imagens/Margherita.jpg" class="card-img-top card-custom" alt="...">
+              <div class="card-body body-custom">
+                <h5 class="card-title">Margherita</h5>
+                <p class="card-text">Clássico italiano.</p>
+                <a href="Margherita.html" class="btn btn-primary button-custom">Pedir!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <img src="./imagens/Quattro Formaggio.jpg" class="card-img-top card-custom" alt="...">
+              <div class="card-body body-custom">
+                <h5 class="card-title">Quattro Formaggio</h5>
+                <p class="card-text">A combinação perfeita de queijos.</p>
+                <a href="Quattro Formaggio.html" class="btn btn-primary button-custom">Pedir!</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row row-custom">
+
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <img src="./imagens/Camarão.jpg" class="card-img-top card-custom" alt="...">
+              <div class="card-body body-custom2">
+                <h5 class="card-title">Camarões na manteiga de alho e pimenta</h5>
+                <p class="card-text">O paraíso em forma de pizza.</p>
+                <a href="Camarões na manteiga de alho e pimenta.html" class="btn btn-primary button-custom">Pedir!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <img src="./imagens/Supreme.jpg" class="card-img-top card-custom" alt="...">
+              <div class="card-body body-custom2">
+                <h5 class="card-title">Supreme</h5>
+                <p class="card-text">O nome já diz tudo...</p>
+                <a href="Supreme.html" class="btn btn-primary button-custom">Pedir!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <img src="./imagens/Hawaiana.jpg" class="card-img-top card-custom" alt="...">
+              <div class="card-body body-custom2">
+                <h5 class="card-title">Havaiana</h5>
+                <p class="card-text">A sensação do momento.</p>
+                <a href="Havaiana.html" class="btn btn-primary button-custom">Pedir!</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-menu" id="footer">
+        <div class="footer-names">
+          <h3>Renan Pires</h3>
+          <p>Responsável pela estruturação e design criativo</p>
+          <div class="icons">
+            <a href="https://www.linkedin.com/in/renan-p-56b74627/" target="_blank"><img width="40" height="40"
+                src="./imagens/linkedin.png" alt="linkedin icon" /></a>
+            <a href="https://github.com/rexpires" target="_blank"><img width="40" height="40" src="./imagens/github.png"
+                alt="github icon" /></a>
+          </div>
+        </div>
+        <div class="footer-names">
+          <h3>Brenner Santos</h3>
+          <p>Responsável pelo responsivo</p>
+          <div class="icons">
+            <a href="https://github.com/brennerdib951066" target="_blank"><img width="40" height="40"
+                src="./imagens/github.png" alt="github icon" /></a>
+          </div>
+        </div>
+        <div class="footer-names">
+          <h3>Gabriel Godoy</h3>
+          <p>Responsável pela página de Login</p>
+          <div class="icons">
+            <a href="https://www.linkedin.com/in/gabriel-godoy-santos-6083311a1/" target="_blank"><img width="40"
+                height="40" src="./imagens/linkedin.png" alt="linkedin icon" /></a>
+            <a href="https://github.com/GabrielGodoyS" target="_blank"><img width="40" height="40"
+                src="./imagens/github.png" alt="github icon" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-msg">
+        <p>Checkpoint 2 desenvolvido em Setembro/2022</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+home.html
+9 KB
