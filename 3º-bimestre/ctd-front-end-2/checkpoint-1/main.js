@@ -149,7 +149,7 @@ class Postage
 
     listaPostagens()
     {
-        let containerRef = document.querySelector('.posts');
+        let containerRef = document.querySelector('.posts1');
         containerRef.innerHTML = '';
 
         for (let item of this.arrayPostagem) 
