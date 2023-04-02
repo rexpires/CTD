@@ -1,90 +1,47 @@
-let MicroOptions = ['pedra', 'papel', 'tesoura']
-let pontoUsuario = 0;
-let pontoOponente = 0;
+var numeroVezesUsuarioVenceu = 0
+var numeroVezesOponenteVenceu = 0
 
+// Função que recebe dois parametros pois iremos precisar das informações da jogada do usuario e da jogada do oponente para realizar os comparativos e determinar quem é o vencedor
+function verificarGanhador(usuario, oponente) {
 
-function perguntaUsuarioDesejaJogar() {
+    // Está função ainda não está completa, você precisa realizar as outras comparações para de fato cobrir todas os casos que podem acontecer
+    // Tenha sempre em mente que: 1 representa Pedra, 2 representa Papel e 3 representa Tesoura
 
-    let usuarioDesejaJogar = confirm('Voce gostaria de jogar?');
+    if(usuario === 1 && oponente === 2) {
 
-    if (usuarioDesejaJogar === true) {
+        // Nessa verificação em específico, só é verificado caso o Usuário escolha Pedra e o Oponente escolha Papel
 
-        while (pontoOponente < 2 && pontoUsuario < 2) {
-            comecarJogo();
-        }
+        console.log('voce perdeu!')
 
-        if (pontoOponente == 2) {
-            alert(`Que pena, você perdeu! - O placar final foi: Você: ${pontoUsuario} - Oponente: ${pontoOponente}`)
-            pontoOponente = 0;
-            pontoUsuario = 0;
-
-
-        } else if (pontoUsuario == 2) {
-            alert(`Parabéns, você ganhou! - O placar final foi: Você: ${pontoUsuario} - Oponente: ${pontoOponente}`)
-            pontoOponente = 0;
-            pontoUsuario = 0;
-        }
-
-    } else {
-
-        alert('Obrigado por visitar a página');
-    }
-
-
-    function comecarJogo() {
-
-        let jogadaUsuario = prompt('Qual é a sua jogada? PEDRA, PAPEL ou TESOURA?').toLowerCase();
-        let jogadaOponente = MicroOptions[Math.floor(Math.random() * MicroOptions.length)];
-        console.log(jogadaUsuario);
-        console.log(jogadaOponente);
-        console.log(pontoUsuario);
-        console.log(pontoOponente);
-
-
-        switch (jogadaUsuario) {
-            case "papel":
-                if (jogadaOponente == "pedra") {
-                    alert(`Parabéns, você é o vencedor! - Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    pontoUsuario++;
-                    break;
-                } else if (MicroTurn == "tesoura") {
-                    alert(`Você perdeu... Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    pontoOponente++;
-                    break;
-                } else if (MicroTurn == "papel") {
-                    alert(`Ninguém ganhou! - Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    break;
-                }
-            case "pedra":
-                if (jogadaOponente == "pedra") {
-                    alert(`Ninguém ganhou! - Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    break;
-                } else if (jogadaOponente == "tesoura") {
-                    alert(`Parabéns, você é o vencedor! - Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    pontoUsuario++;
-                    break;
-                } else if (jogadaOponente == "papel") {
-                    alert(`Você perdeu... Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    pontoOponente++;
-                    break;
-                }
-            case "tesoura":
-                if (jogadaOponente == "pedra") {
-                    alert(`Você perdeu... Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    pontoOponente++;
-                    break;
-                } else if (jogadaOponente == "tesoura") {
-                    alert(`Ninguém ganhou! - Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    break;
-                } else if (jogadaOponente == "papel") {
-                    alert(`Parabéns, você é o vencedor! - Você escolheu ${jogadaUsuario.toUpperCase()} e seu oponente ${jogadaOponente.toUpperCase()}`);
-                    pontoUsuario++;
-                    break;
-                }
-            default:
-                break;
-        }
     }
 
 }
 
+function comecarJogo() {
+
+    let jogadaUsuario = Number(prompt('O que voce deseja jogar? 1 = pedra, 2 = papel, 3 = tesoura'))
+    let jogadaOponente = Math.floor(Math.random() * 3) + 1
+
+    // Após obter a Jogada do Usuário e Gerar uma Jogada para o Oponente, chamamos a função para verificar quem foi o ganhador
+    verificarGanhador(jogadaUsuario, jogadaOponente)
+
+}
+
+function perguntaUsuarioDesejaJogar() {
+
+    let usuarioDesejaJogar = confirm('Você gostaria de jogar?')
+
+    if(usuarioDesejaJogar === true) {
+
+        comecarJogo()
+
+    } else {
+
+        alert('Obrigado por visitar a pagina')
+
+    }
+
+}
+
+// Chamada da função que ira Começar o nosso game
+perguntaUsuarioDesejaJogar()

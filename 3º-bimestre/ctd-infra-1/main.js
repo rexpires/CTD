@@ -1,37 +1,16 @@
-let nome = "Renan"
-let minhaIdade = 31
-let comidaFavorita 
+// let titulosMundiais = [1958, 1962, 1970, 1994, 2002];
 
-comidaFavorita = "tutu de feijão"
+// console.log(titulosMundiais)
 
-console.log(nome, idade, comidaFavorita)
+// for (var i = 0; i < titulosMundiais.length; i++) {
+//     console.log(`o Brasil ganhou a copa de ${titulosMundiais[i]}`)
+// }
 
-// Dica rápida, frases (string) devem ser colocadas entre aspas
-// (simples ou duplas) e números não levam aspas.
+var frutas = ['banana','maçã', 'pera', 'uva','melancia']
 
-// Declare uma variável contendo uma string
-var sobrenome = "Pires"
-
-console.log(sobrenome)
-// Declare uma variável contendo um número dentro de uma string
-// Declare uma variável com a sua idade
-var idade = 31
-var resposta = "Tenho " + idade + " anos de idade"
-
-console.log(resposta)
-
-
-// Declare duas variáveis, uma com seu nome
-// e outra com seu sobrenome e some as mesmas
-console.log(nome, sobrenome)
-
-
-// Coloque a seguinte frase em uma variável: It's time
-var frase = "It's time"
-
-// Verifique o tipo da variável que contém o seu nome
-console.log(typeof frase)
-
-var resposta = `Tenho ${idade} anos de idade`
-
-console.log(resposta)
+for (var i = 0; i < frutas.length; i++) {
+    console.log(frutas[i])
+    if (frutas[i] === 'pera') {
+        break;
+    }
+}
