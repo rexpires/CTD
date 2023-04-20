@@ -46,7 +46,6 @@ a {
   cursor: pointer;
 }
 
-/* Nova tarefa ----------------------------------------------------------- */
 
 .nova-tarefa {
   position: relative;
@@ -109,8 +108,28 @@ a {
   text-align: center;
   color: grey;
 }
+small{
+  display:none;
 
-/* Lista de tarefas ----------------------------------------------------------- */
+}
+.error small {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 80%;
+  margin: 0 10%;
+  padding: 1em;
+  box-shadow: 2px 2px 10px lightgrey;
+  border-radius: .2em;
+  z-index: 20;
+  color: red;
+  justify-content: center
+  
+  
+}
+
+
 
 .tarefas-pendentes {
   display: flex;
@@ -182,7 +201,7 @@ a {
   color: rgb(134, 134, 134);
 }
 
-/* Tarefas terminadas ----------------------------------------------------------- */
+
 
 .titulo-terminadas {
   position: relative;
@@ -222,6 +241,10 @@ a {
 .tarefas-terminadas .tarefa .descricao .nome {
   color: grey;
   text-decoration: line-through;
+}
+.excluir{
+  color: red
+
 }
 
 #skeleton .descricao{
